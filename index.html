@@ -490,7 +490,7 @@
           </div>
 
           <div class="col-lg-5 col-md-8">
-            <div class="form">
+<!--             <div class="form">
               <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -516,6 +516,27 @@
         obj.name= document.getElementById("name").value;
         obj.email=  document.getElementById("email").value;
         obj.subject=  document.getElementById("subject").value;
+        window.setCustomFields(obj);
+      console.log("obj.. 123",obj);
+      }
+    </script> -->
+            
+            
+            
+            
+            
+       <form>
+      <label><b>Enter your Name</b></label>
+      <input type="text" name="FirstName" id="FirstName" />
+      <label><b>Enter Phone</b></label>
+      <input type="number" name="Phone" id="Contact" />
+    </form>
+    <input type="submit" onclick="showInput();" /><br />
+    <script>
+      function showInput() {
+        let obj={};
+        obj.FirstName= document.getElementById("FirstName").value;
+        obj.Contact=  document.getElementById("Contact").value;
         window.setCustomFields(obj);
       console.log("obj.. 123",obj);
       }
